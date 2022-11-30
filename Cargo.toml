@@ -1,0 +1,9 @@
+[package]
+name = "advent-of-code-2022"
+version = "0.1.0"
+authors = ["Graeme Robertson <grobertson@microsoft.com>"]
+edition = "2021"
+
+[dependencies]
+lazy_static = "1.4.0"
+structopt = "0.3.26"
