@@ -6,16 +6,16 @@ pub(crate) fn day01() {
     let reader: BufReader<File> = BufReader::new(f);
 
     // Assume the data contains at least one elf
-    let mut number_of_elves: usize = 1;
-    let mut calories: Vec<u32> = vec![0; number_of_elves];
+    let mut calories: Vec<u32> = vec![];
+    let mut current_calories: u32 = 0;
 
     for line in reader.lines() {
         if let Ok(i) = line.unwrap().parse::<u32>() {
-            calories[number_of_elves - 1] += i;
+            current_calories += i;
         } else {
             // New elf
-            number_of_elves += 1;
-            calories.push(0);
+            calories.push(current_calories);
+            current_calories = 0;
         }
     }
 
