@@ -79,7 +79,7 @@ pub(crate) fn day05() {
     let mut cratemover_9000_stacks = initial_stacks.clone();
     operate_cratemover_9000(&list_of_instructions, &mut cratemover_9000_stacks);
     println!(
-        "{}",
+        "Top set of crates after the CrateMover 9000 is {}",
         cratemover_9000_stacks
             .iter()
             .map(|x| x.last().unwrap())
@@ -89,7 +89,7 @@ pub(crate) fn day05() {
     let mut cratemover_9001_stacks = initial_stacks;
     operate_cratemover_9001(&list_of_instructions, &mut cratemover_9001_stacks);
     println!(
-        "{}",
+        "Top set of crates after the CrateMover 9001 is {}",
         cratemover_9001_stacks
             .iter()
             .map(|x| x.last().unwrap())
