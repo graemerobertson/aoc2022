@@ -6,6 +6,7 @@ mod day03;
 mod day04;
 mod day05;
 mod day06;
+mod day07;
 
 #[derive(StructOpt)]
 struct Cli {
@@ -21,6 +22,7 @@ fn main() {
         4 => day04::day04(),
         5 => day05::day05(),
         6 => day06::day06(),
+        7 => day07::day07(),
         411 => {
             day01::day01();
             day02::day02();
@@ -28,6 +30,7 @@ fn main() {
             day04::day04();
             day05::day05();
             day06::day06();
+            day07::day07();
         }
         _ => println!("Unimplemented day: {}", args.day),
     }
