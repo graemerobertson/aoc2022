@@ -6,17 +6,13 @@ const START_OF_PACKET_MARKER_LENGTH: usize = 4;
 const START_OF_MESSAGE_MARKER_LENGTH: usize = 14;
 
 fn get_end_of_unique_seq_index(stream: &str, length: usize) -> Option<usize> {
-    for i in length..stream.len() {
-        if stream[i - length..i]
+    (length..stream.len()).find(|&i| {
+        stream[i - length..i]
             .chars()
             .collect::<HashSet<char>>()
             .len()
             == length
-        {
-            return Some(i);
-        }
-    }
-    None
+    })
 }
 
 pub(crate) fn day06() {
