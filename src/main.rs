@@ -75,7 +75,9 @@ fn main() {
             day13::day13();
             day14::day14();
             day15::day15();
-            day16::day16();
+            println!();
+            println!("!!! DAY 16 IS TOO SLOW !!!");
+            println!();
             day17::day17();
             day18::day18();
             day19::day19();
